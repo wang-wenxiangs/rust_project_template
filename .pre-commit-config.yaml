@@ -1,28 +1,45 @@
+# Pre-commit 官方文档: https://github.com/pre-commit/pre-commit
+# Pre-commit Hooks 仓库: https://github.com/pre-commit/pre-commit-hooks
+
 fail_fast: false
+# repos 是一个列表，定义了多个仓库（repositories）
 repos:
+  # repo: 指定钩子所在的仓库地址
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.3.0
+  # rev: 指定仓库的版本标签或提交哈希
+  rev: v5.0.0
+  # hooks: 列出具体要启用的钩子，每个钩子通过 id 指定
   hooks:
     - id: check-byte-order-marker
+      # check-case-conflict: 检查文件名大小写冲突
     - id: check-case-conflict
+      # check-merge-conflict: 检查是否存在合并冲突标记。
     - id: check-merge-conflict
+      # check-symlinks: 检查符号链接的有效性
     - id: check-symlinks
+      # check-yaml: 验证 YAML 文件的格式是否正确
     - id: check-yaml
+      # end-of-file-fixer: 确保文件以单个换行符结尾。
     - id: end-of-file-fixer
+      # mixed-line-ending: 检查并报告文件中混合使用不同的行结束符
     - id: mixed-line-ending
+      # trailing-whitespace: 检查并移除行尾空白。
     - id: trailing-whitespace
-- repo: https://github.com/psf/black
-  rev: 22.10.0
-  hooks:
-    - id: black
+  # repo: local: 表示这些钩子是本地自定义的，而不是来自远程仓库
 - repo: local
   hooks:
     - id: cargo-fmt
+      # name: 钩子的名称，便于识别
       name: cargo fmt
+      # description: 钩子的描述，说明其功能
       description: Format files with rustfmt.
+      # entry: 指定要执行的命令
       entry: bash -c 'cargo fmt -- --check'
+      # language: 指定钩子所用的语言环境
       language: rust
+      # files: 正则表达式，匹配需要格式化的文件类型
       files: \.rs$
+      # args: 传递给执行命令的参数
       args: [ ]
     - id: cargo-deny
       name: cargo deny check
