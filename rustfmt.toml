@@ -6,6 +6,7 @@
 # tab_spaces = 4
 # 设置 Rust 版本（根据实际项目版本进行调整）
 # edition = "2024"
+# tyle_edition = "2024"
 # 设置换行策略
 # use_small_heuristics = "Max"
 # 设置换行符风格，根据平台自动选择
