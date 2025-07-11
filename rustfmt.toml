@@ -1,0 +1,12 @@
+# rustfmt 配置文件
+
+# 设置最大行宽为 100 个字符
+# max_width = 100
+# 设置缩进宽度为 4 个空格
+# tab_spaces = 4
+# 设置 Rust 版本（根据实际项目版本进行调整）
+# edition = "2024"
+# 设置换行策略
+# use_small_heuristics = "Max"
+# 设置换行符风格，根据平台自动选择
+# newline_style = "Auto"

@@ -89,5 +89,7 @@ cargo install cargo-nextest --locked
 Rustfmt是一个Rust编程语言的代码格式化工具
 
 ```bash
+rustup component add rustfmt
+
 cargo install rustfmt
 ```

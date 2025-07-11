@@ -55,6 +55,12 @@ repos:
       language: rust
       files: \.*$
       pass_filenames: false
+    - id: fmt
+      name: fmt
+      description: format files
+      entry: bash -c 'cargo fmt'
+      language: rust
+      files: \.rs$
     - id: cargo-check
       name: cargo check
       description: Check the package for errors.
