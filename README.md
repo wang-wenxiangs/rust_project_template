@@ -93,3 +93,9 @@ rustup component add rustfmt
 
 cargo install rustfmt
 ```
+
+**使用:**
+
+```shell
+cargo fmt
+```
