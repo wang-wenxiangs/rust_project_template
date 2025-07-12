@@ -34,7 +34,7 @@ repos:
       # description: 钩子的描述，说明其功能
       description: Format files with rustfmt.
       # entry: 指定要执行的命令
-      entry: bash -c 'cargo fmt'
+      entry: bash -c 'cargo fmt --check'
       # language: 指定钩子所用的语言环境
       language: rust
       # files: 正则表达式，匹配需要格式化的文件类型
