@@ -28,13 +28,6 @@ repos:
   # repo: local: 表示这些钩子是本地自定义的，而不是来自远程仓库
 - repo: local
   hooks:
-    - id: cargo-fmt
-      name: cargo fmt
-      description: Format files with rustfmt.
-      entry: bash -c 'cargo fmt'
-      language: rust
-      files: \.rs$
-      args: [ ]
     - id: cargo-fmt-check
       # name: 钩子的名称，便于识别
       name: cargo fmt check
